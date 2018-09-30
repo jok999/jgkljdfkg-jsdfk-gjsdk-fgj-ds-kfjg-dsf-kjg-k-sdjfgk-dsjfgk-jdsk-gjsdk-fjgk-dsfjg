@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const yt = require('ytdl-core');
+const cuttweet = require('cuttweet');
 
 const prefix = '%'//تقد تغير البرفكس للي تبيه
  //الحقوق كامله محفوضه لدا سيرفر الفا
