@@ -37,7 +37,7 @@ client.on('ready', () => {
 let points = JSON.parse(fs.readFileSync('points.json', 'utf8'));
 client.on('message', message => {
     if (!points[message.author.id]) points[message.author.id] = {points : 0}
-    if (message.content == 'نقاطي'){
+    if (message.content == '%نقاطي'){
         var embed = new Discord.RichEmbed()
         .setAuthor(message.author.username,message.author.avatarURL)
         .addField(`نقاطك : ${points[message.author.id].points}`,'FiKO || ໑ڪــɹ̤ᓅ',   true) 
