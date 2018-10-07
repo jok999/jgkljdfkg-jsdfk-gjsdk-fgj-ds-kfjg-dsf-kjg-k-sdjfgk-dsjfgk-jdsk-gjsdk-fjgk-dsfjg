@@ -40,7 +40,7 @@ client.on('message', message => {
     if (message.content == '%نقاطي'){
         var embed = new Discord.RichEmbed()
         .setAuthor(message.author.username,message.author.avatarURL)
-        .addField(`نقاطك : ${points[message.author.id].points}`,   true) 
+        .addField(`نقاطك : ${points[message.author.id].points}`,'التجميع عن طريق الالعاب',   true) 
         .setColor('RANDOM')
         .setFooter('Games', client.user.avatarURL);
         message.channel.sendEmbed(embed)
