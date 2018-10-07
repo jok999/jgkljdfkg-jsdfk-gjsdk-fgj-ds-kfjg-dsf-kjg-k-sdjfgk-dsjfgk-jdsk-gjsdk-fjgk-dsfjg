@@ -37,7 +37,7 @@ client.on('ready', () => {
 let points = JSON.parse(fs.readFileSync('points.json', 'utf8'));
 client.on('message', message => {
     if (!points[message.author.id]) points[message.author.id] = {points : 0}
-  if (msg.content.startsWith(`%نقاطي`)) {
+    if (message.content == 'نقاطي'){
         var embed = new Discord.RichEmbed()
         .setAuthor(message.author.username,message.author.avatarURL)
         .addField(`نقاطك : ${points[message.author.id].points}`,'FiKO || ໑ڪــɹ̤ᓅ',   true) 
@@ -45,7 +45,6 @@ client.on('message', message => {
         .setFooter('Games', client.user.avatarURL);
         message.channel.sendEmbed(embed)
     };
-   var prefix = "%";
     if (message.content == "فكك") {    
         var x = ['فيكو الحلو', 'طيارة', 'عرفا', 'تفكيك', 'تجربة', 'مدرسة', 'معلم' , 'نقاط' , 'سن' , 'استعن بالله' , 'عدل' , 'جميل جمال' , 'محمد الشمراني' , 'المالديف'];
         var x2 = ['ف ي ك و ا ل ح ل و', 'ط ي ا ر ة', 'عرفا', 'ت ف ك ي ك', 'ت ج ر ب ة', 'م د ر س ة', 'م ع ل م', 'ن ق ا ط', 'س ن', 'ا س ت ع ن ب ا ل ل ه', 'ع د ل', 'ج م ي ل ج م ا ل', 'م ح م د ا ل ش م ر ا ن ي', 'ا ل م ا ل د ي ف'];
@@ -122,7 +121,7 @@ client.on('message', message => {
         })
         r.then(s=> {
  
-            points[message.author.id].points +=3
+            points[message.author.id].points +=1
             message.channel.send(`${message.author} : صاحب الإجابة 
 ☻ لقد قمت بكتابة الجواب الصحيح ☻
 نقاطك : ⇤ ${points[message.author.id].points } ⇥`);
@@ -133,6 +132,7 @@ client.on('message', message => {
     fs.writeFile('points.json', JSON.stringify(points), (err) => {
         if (err) console.error(err);
     })
+   
   if (message.content == "عواصم") {
         var x = ['اليمن', 'مصر', 'الجزائر', 'السعودية', 'الصومال', 'العراق' , 'الامارات' , 'سوريا' , 'المغرب'];
         var x2 = ['صنعاء', 'القاهرة', 'الجزائر', 'الرياض', 'الخرطوم', 'بغداد', 'ابو ظبي','دمشق ','الر باط'];
@@ -180,7 +180,7 @@ client.on('message', message => {
         })
         r.then(s=> {
  
-            points[message.author.id].points +=2
+            points[message.author.id].points +=1
             message.channel.send(`${message.author} : صاحب الإجابة 
 ☻ لقد قمت بكتابة الجواب الصحيح ☻
 نقاطك : ⇤ ${points[message.author.id].points } ⇥`);
@@ -236,20 +236,21 @@ client.on('message', message => {
       .setColor("RANDOM")
       .setDescription(` ✧▬▬▬▬▬ BOT Games ▬▬▬▬▬✧
  
-%قم بتفكيك الجمل  ➼ فكك
+قم بتفكيك الجمل  ➼ فكك
  
-%قم بتركيب الجمل  ➼ ركب
+قم بتركيب الجمل  ➼ ركب
  
-%قم بحل المسائل الرياضية  ➼ احسب
+قم بحل المسائل الرياضية  ➼ احسب
  
-%قم بأيجاد العواصم المطلوبة ➼ عواصم
+قم بأيجاد العواصم المطلوبة ➼ عواصم
  
-%قم بحل الألغاز ➼ لغز
+قم بحل الألغاز ➼ لغز
  
-%قم بتجميع الحروف ➼ رتب
+قم بتجميع الحروف ➼ رتب
  
-%لعرض النقاط الخاصة بك ➼ نقاطي
+لعرض النقاط الخاصة بك ➼ نقاطي
  
+ ✧▬▬▬▬▬ **الالعاب** ▬▬▬▬▬✧`)
    message.channel.sendEmbed(embed)
    
    }
