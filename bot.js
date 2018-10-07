@@ -75,7 +75,6 @@ client.on('message', message => {
     fs.writeFile('points.json', JSON.stringify(points), (err) => {
         if (err) console.error(err);
     })
- var prefix = "%";
         if (message.content == "ركب") {    
         var x = ['ض ف د ع', 'ط ي ا ر ة', 'ر ع و د ي', 'ت ف ك ي ك', 'ت ج ر ب ة', 'م د ر س ة', 'م ع ل م', 'ن ق ا ط', 'ا ك س ي ف و', 'م ك و ه', 'ر و ق ن'];
         var x2 = ['ضفدع', 'طيارة', 'رعودي', 'تفكيك', 'تجربة', 'مدرسة', 'معلم' , 'نقاط' , 'اكسيفو' , 'مكوه' , 'هكونا مطاطا' , 'روقن'];
@@ -105,7 +104,6 @@ client.on('message', message => {
     fs.writeFile('points.json', JSON.stringify(points), (err) => {
         if (err) console.error(err);
     })
- var prefix = "%";
         if (message.content == "احسب") {    
         var x = ['50×50', '1000000×1', '89×10', '90×5', '30×3', '10×10', '1000×1000', '44.5+44.5', '3500 ÷ 385', '3500 ÷ 588'];
         var x2 = ['2500', '1000000', '890', '450', '90', '100', '1000000' , '89' , '9' , '5'];
@@ -135,7 +133,6 @@ client.on('message', message => {
     fs.writeFile('points.json', JSON.stringify(points), (err) => {
         if (err) console.error(err);
     })
-   var prefix = "%";
   if (message.content == "عواصم") {
         var x = ['اليمن', 'مصر', 'الجزائر', 'السعودية', 'الصومال', 'العراق' , 'الامارات' , 'سوريا' , 'المغرب'];
         var x2 = ['صنعاء', 'القاهرة', 'الجزائر', 'الرياض', 'الخرطوم', 'بغداد', 'ابو ظبي','دمشق ','الر باط'];
@@ -165,7 +162,6 @@ client.on('message', message => {
     fs.writeFile('points.json', JSON.stringify(points), (err) => {
         if (err) console.error(err);
     })
- var prefix = "%";
     if (message.content == "لغز") {
         var x = ['كلي ثقوب ومع ذلك أحفظ الماء فمن أكون ؟', 'ما هو الشيء الذي يمشي و يقف وليس له أرجـل ؟', 'ما هو الشئ الذي يرفع اثقال ولا يقدر يرفع مسمار ؟', 'يسمع بلا أذن ويتكلم بلا لسان فما هو ؟', 'ماهو الشيء الذي يكتب و لا يقرأ ؟', 'ماهو الشيء الذي يكون اخضر في الارض واسود في السوق واحمــر في البيت ؟', 'عائلة مؤلفة من 6 بنات وأخ لكل منهن، فكم عدد أفراد العائلة ؟', 'يتحرك دائماً حواليك لكنك لاتراه فما هو ؟' ,'ما هو البليون ؟'];
         var x2 = ['الاسفنج', 'الساعة', 'البحر', 'التلفون', 'العمر', 'الشاي', 'سبعة اشخاص' ,'الهواء' ,'الف مليون'];
@@ -195,7 +191,6 @@ client.on('message', message => {
     fs.writeFile('points.json', JSON.stringify(points), (err) => {
         if (err) console.error(err);
     })
- var prefix = "%";
   if (message.content == "رتب") {    
         var x = ['ف ض ع د', 'ص ش خ', 'ة د ا ر ج', 'ا ر ي ة س', 'ي ت ب', 'ئ ا ع ل ة', ' ا ش ي', 'ن ح و ي ا', 'س د و ي ك ر د', 'ر ط ي ا ة' , 'ن ح ز ل و', 'ك ا ف ي س و'];
         var x2 = ['ضفدع', 'شخص', 'دراجة', 'سيارة', 'بيت', 'عائلة', 'شاي', 'حيوان', 'ديسكورد', 'طيارة', 'حلزون', 'اكسيفو'];
@@ -236,7 +231,6 @@ client.on('message', message => {
    
    
     client.on("message", message => {
-     var prefix = "%";
  if (message.content === "العاب") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
