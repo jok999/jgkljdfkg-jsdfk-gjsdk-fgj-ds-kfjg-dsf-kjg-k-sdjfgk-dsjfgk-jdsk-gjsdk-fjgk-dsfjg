@@ -327,7 +327,6 @@ if(cmd === `${prefix}coins`) {
 
   
 
-  const images = require("images")
   const gif = require("gif-search")
 client.on('message', message => {
     var prefix ="%"
