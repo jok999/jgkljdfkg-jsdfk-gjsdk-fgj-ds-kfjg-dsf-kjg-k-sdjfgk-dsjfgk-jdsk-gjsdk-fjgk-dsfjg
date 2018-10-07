@@ -40,7 +40,7 @@ client.on('message', message => {
     if (message.content == '%نقاطي'){
         var embed = new Discord.RichEmbed()
         .setAuthor(message.author.username,message.author.avatarURL)
-        .addField(`نقاطك : ${points[message.author.id].points}`,'FiKO || ໑ڪــɹ̤ᓅ',   true) 
+        .addField(`نقاطك : ${points[message.author.id].points}`,   true) 
         .setColor('RANDOM')
         .setFooter('Games', client.user.avatarURL);
         message.channel.sendEmbed(embed)
@@ -234,7 +234,7 @@ client.on('message', message => {
  if (message.content === "%العاب") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setDescription(` ✧▬▬▬▬▬ BOT Games ▬▬▬▬▬✧
+      .setDescription(` ✧▬▬▬▬▬  **الالعاب**  ▬▬▬▬▬✧
  
 قم بتفكيك الجمل  ➼ فكك
  
