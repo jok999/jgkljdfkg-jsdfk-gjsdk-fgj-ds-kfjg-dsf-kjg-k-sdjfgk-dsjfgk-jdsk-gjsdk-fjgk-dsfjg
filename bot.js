@@ -181,7 +181,7 @@ client.on('message', message => {
            const embed = new Discord.RichEmbed()
      if (message.content === "g%help") {
        message.reply(`تم ارسال المعلومات في الخاص :white_check_mark:`) 
-message.author.send("Credit Bot" + `  **
+message.channel.send("Credit Bot" + `  **
 
 
 %credit::dollar:معرفة كم معاك من الكردت:dollar: 
@@ -190,7 +190,7 @@ message.author.send("Credit Bot" + `  **
 %daily::yen:يمكن الحصول على الكردت عن طريق هذا الامر:yen: 
 
 
-يمكن ارسال الكردت الي اي شخص تريده
+:inbox_tray: :outbox_tray:يمكن ارسال الكردت الي اي شخص تريده:inbox_tray: :outbox_tray: 
 **`);
     }
 });
@@ -208,10 +208,9 @@ if (message.content.startsWith('g%inv')){
      let ra3d = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("RANDOM")
-  .setDescription("⚙http://cutt.us/Credit_bot⚙")
-  .setFooter("Credit Bot")
+  .setDescription("⚙http://cutt.us/Credit_bot ⚙")
 
-  message.channel.sendEmbed(ra3d);
+  message.author.sendEmbed(ra3d);
     }
 });
 
