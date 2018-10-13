@@ -85,7 +85,7 @@ client.on('message',async message => {
   if(!credits[mention.id]) credits[mention.id] = {credits: 0};
   fs.writeFile(path, JSON.stringify(credits, null, 5), function(err) {if(err) console.log(err)});
  
-   const prefix = "$"
+   const prefix = "g%"
   if(message.content.startsWith(prefix + "credit")) {
   if(args[0] !== `${prefix}credit` && args[0] !== `${prefix}credits`) return;
  
