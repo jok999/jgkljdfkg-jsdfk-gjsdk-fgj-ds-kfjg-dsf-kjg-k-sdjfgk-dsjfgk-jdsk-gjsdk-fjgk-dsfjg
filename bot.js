@@ -180,7 +180,7 @@ client.on('ready', () => {
 client.on('message', message => {
            const embed = new Discord.RichEmbed()
      if (message.content === "g%help") {
-       message.reply(`تم ارسال المعلومات في الخاص :white_check_mark:`) 
+        
 message.channel.send("Credit Bot" + `  **
 
 
@@ -205,12 +205,13 @@ message.channel.send("Credit Bot" + `  **
 
 client.on('message', message => {
 if (message.content.startsWith('g%inv')){
+    message.reply(`تم ارسال الرابط في الخاص :white_check_mark:`)
      let ra3d = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("RANDOM")
   .setDescription("⚙http://cutt.us/Credit_bot ⚙")
 
-  message.author.sendEmbed(ra3d);
+  message.author.send(ra3d);
     }
 });
 
