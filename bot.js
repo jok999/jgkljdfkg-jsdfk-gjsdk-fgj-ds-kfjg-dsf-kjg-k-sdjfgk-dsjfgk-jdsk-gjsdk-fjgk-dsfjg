@@ -1,6 +1,6 @@
 if(!Discord) var Discord = require('discord.js');
 if(!client) var client = new Discord.Client();
-if(!prefix) var prefix = "%" ; // البرفكس 
+if(!prefix) var prefix = "g%" ; // البرفكس 
 
 var stopReacord = true;
 var reactionRoles = [];
@@ -184,10 +184,10 @@ client.on('message', message => {
 message.channel.send("**:book:اوامر البوت:book:**" + `  **
 
 
-%credit::dollar:معرفة كم معاك من الكردت:dollar: 
+g%credit::dollar:معرفة كم معاك من الكردت:dollar: 
 
 
-%daily::yen:يمكن الحصول على الكردت عن طريق هذا الامر:yen: 
+g%daily::yen:يمكن الحصول على الكردت عن طريق هذا الامر:yen: 
 
 
 :inbox_tray: :outbox_tray:يمكن ارسال الكردت الي اي شخص تريده:inbox_tray: :outbox_tray: 
@@ -203,16 +203,22 @@ message.channel.send("**:book:اوامر البوت:book:**" + `  **
 
 
 
-client.on('message', message => {
-if (message.content.startsWith('g%inv')){
-    message.reply(`تم ارسال الرابط في الخاص :white_check_mark:`)
-       const embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("RANDOM")
-  .setDescription("⚙http://cutt.us/Credit_bot ⚙")
+ client.on('message' , message => {
 
-  message.author.send(ra3d);
-    }
+    if (message.content === "g%inv") {
+	    message.reply(`تم ارساله الرابط في الخاص`) 
+        if(!message.channel.guild) return message.reply('**الآمر فقط في السيرفرات**');
+     const embed = new Discord.RichEmbed()
+ .setColor("RANDOM")
+ .setThumbnail(client.user.avatarURL)     
+ .setDescription("Credit Bot" + `
+ **
+رابط البوت |
+http://cutt.us/Credit_bot
+ **
+`);
+  message.author.sendEmbed(embed);
+   }
 });
 
 
