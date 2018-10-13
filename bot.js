@@ -167,6 +167,9 @@ client.on('message',async message => {
 
 
 
+client.on('ready', () => {
+  client.user.setGame(`g%help || g%inv `,'https://www.twitch.tv/jokar_999');
+});
 
 
 
