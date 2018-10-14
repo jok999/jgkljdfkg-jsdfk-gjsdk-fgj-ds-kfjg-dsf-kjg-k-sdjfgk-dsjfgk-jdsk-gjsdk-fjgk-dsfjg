@@ -79,7 +79,7 @@ client.on('message',async message => {
   const mentionn = message.mentions.users.first() || client.users.get(args[1]);
   const author = message.author.id;
   const balance = args[2];
-  const daily = Math.floor(Math.random() * 350) + 10;
+  const daily = Math.floor(Math.random() * 10000) + 10;
  
   if(!credits[author]) credits[author] = {credits: 0};
   if(!credits[mention.id]) credits[mention.id] = {credits: 0};
@@ -102,7 +102,7 @@ client.on('message',async message => {
     var number = `${one}${two}${three}${four}`;
    
     message.channel.send(`**:heavy_dollar_sign:| \`${number}\`, أكتب الرقم للأستمرار**`).then(m => {
-      message.channel.awaitMessages(m => m.author.id === message.author.id, {max: 1, time: 10000}).then(c => {
+      message.channel.awaitMessages(m => m.author.id === message.author.id, {max: 1, time: 30000}).then(c => {
         if(c.first().content === number) {
           m.delete();
           message.channel.send(`**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**`);
