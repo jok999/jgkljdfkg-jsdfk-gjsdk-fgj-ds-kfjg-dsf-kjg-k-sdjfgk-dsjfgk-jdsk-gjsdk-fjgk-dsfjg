@@ -79,10 +79,10 @@ client.on('message',async message => {
   const mentionn = message.mentions.users.first() || client.users.get(args[1]);
   const author = message.author.id;
   const balance = args[2];
-  const daily = Math.floor(Math.random() * 10000) + 10;
+  const daily = Math.floor(Math.random() * 350) + 10;
  
-  if(!credits[author]) credits[author] = {credits: 0};
-  if(!credits[mention.id]) credits[mention.id] = {credits: 0};
+  if(!credits[author]) credits[author] = {credits: 944444444};
+  if(!credits[mention.id]) credits[mention.id] = {credits: 944444444};
   fs.writeFile(path, JSON.stringify(credits, null, 5), function(err) {if(err) console.log(err)});
  
    const prefix = "g%"
