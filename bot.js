@@ -81,8 +81,8 @@ client.on('message',async message => {
   const balance = args[2];
   const daily = Math.floor(Math.random() * 350) + 10;
  
-  if(!credits[author]) credits[author] = {credits: 944444444};
-  if(!credits[mention.id]) credits[mention.id] = {credits: 944444444};
+  if(!credits[author]) credits[author] = {credits: 0};
+  if(!credits[mention.id]) credits[mention.id] = {credits: 0};
   fs.writeFile(path, JSON.stringify(credits, null, 5), function(err) {if(err) console.log(err)});
  
    const prefix = "g%"
@@ -133,7 +133,7 @@ client.on('message',async message => {
       var number = `${one}${two}${three}${four}`;
  
       message.channel.send(`**:atm: | \`${number}\`, قم بكتابة الرقم للأستمرار**`).then(async m => {
-        message.channel.awaitMessages(msg => msg.author.id === message.author.id, {max: 1, time: 20000, errors: ['time']}).then(collected => {
+        message.channel.awaitMessages(msg => msg.author.id === message.author.id, {max: 1, time: 30000, errors: ['time']}).then(collected => {
           if(collected.first().content === number) {
             m.delete();
             collected.first().delete();
