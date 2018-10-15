@@ -97,6 +97,7 @@ client.on("message", (message) => {
   if (message.author.bot) return;
     if (message.author.id === client.user.id) return;
     if(!message.channel.guild) return;
+	var prefix = "%" ;
 if (message.content.startsWith(prefix + 'credit')) {
   if(men) {
     if (!profile[men.id]) profile[men.id] = {
@@ -160,7 +161,7 @@ message.channel.send(`**:moneybag: | ${message.author.username}, has transferrer
 
 
 client.on('ready', () => {
-  client.user.setGame(`g%help || g%inv `,'https://www.twitch.tv/jokar_999');
+  client.user.setGame(`صيانه`,'https://www.twitch.tv/jokar_999');
 });
 
 
