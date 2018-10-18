@@ -231,7 +231,6 @@ http://cutt.us/Credit_bot
 
 
 
-const Canvas = require("canvas");//for linux = npm i canvas | for windows = npm i canvas-prebuilt
 const jimp = require("jimp");// npm i jimp
 const prefix = "="; // prefix
 const client = new Discord.Client();
