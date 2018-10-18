@@ -230,9 +230,8 @@ http://cutt.us/Credit_bot
 
 
 
-
-const jimp = require("jimp");// npm i jimp
 const prefix = "="; // prefix
+const jimp = require("jimp");// npm i jimp
 const client = new Discord.Client();
 const id = JSON.parse(fs.readFileSync("./id/mozo.json", "utf8"));
 client.on("message", message => {
