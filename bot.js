@@ -129,3 +129,14 @@ message.channel.sendFile(canvas.toBuffer());
 }
 });
 });
+
+
+
+
+
+
+
+
+
+
+client.login("BOT_TOKEN");
