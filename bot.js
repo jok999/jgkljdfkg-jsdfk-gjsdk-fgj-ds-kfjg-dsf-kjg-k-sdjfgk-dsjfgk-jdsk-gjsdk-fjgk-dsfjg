@@ -125,4 +125,4 @@ message.guild.createChannel('Talk ◥', 'voice')
 
 
 
-client.login("BOT_TOKEN");
+client.login(process.env.BOT_TOKEN);
